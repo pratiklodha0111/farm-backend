@@ -25,7 +25,7 @@ jobs:
         run: docker push photochitran/springboot-example:latest
   deploy:
     needs: build
-    runs-on: [aws-ec2]
+    runs-on: [aws-ec2-farm-backend]
     steps:
       - name: Pull Image from docker hub
         run: docker pull photochitran/springboot-example:latest
